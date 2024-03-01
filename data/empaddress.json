@@ -1,0 +1,10 @@
+[
+  {
+      "empid": "100",
+      "empaddress": "123 Main St, New Hampshire"
+  },
+  {
+      "empid": "200",
+      "empaddress": "456 Elm St, Massachussets"
+  }
+]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding declaration -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Search Results</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+        // Function to display an alert when no data is found
+        function displayNoDataAlert() {
+            alert('User details not found!');
+        }
+    </script>
+</head>
+<body>
+    <h1>User Search Results</h1>
+
+    <% if (user) { %>
+        <!-- Table to display user details -->
+        <table border="1">
+            <tr>
+                <th>User ID</th>
+                <td><%= user.userid || 'N/A' %></td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td><%= user.username || 'N/A' %></td>
+            </tr>
+            <tr>
+                <th>Address ID</th>
+                <td><%= address ? address.addressid || 'N/A' : 'Address not found' %></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><%= address ? address.addresscity || 'N/A' : 'City not found' %></td>
+            </tr>
+            <tr>
+                <th>Employer ID</th>
+                <td><%= employer ? employer.empid || 'N/A' : 'Employer ID not found' %></td>
+            </tr>
+            <!-- Employer Name -->
+            <tr>
+                <th>Employer Name</th>
+                <td><%= employer ? employer.empname || 'N/A' : 'Employer name not found' %></td>
+            </tr>
+            <tr>
+                <th>Employer Company</th>
+                <td><%= employer ? employer.empcompany || 'N/A' : 'Employer company not found' %></td>
+            </tr>
+            <tr>
+                <th>Employer Address</th>
+                <td><%= empAddress ? empAddress.empaddress || 'N/A' : 'Employer address not found' %></td>
+            </tr>
+        </table>
+    <% } else { %>
+        <!-- JavaScript to display alert when no user data is found -->
+        <script>
+            displayNoDataAlert();
+        </script>
+    <% } %>
+</body>
+</html>

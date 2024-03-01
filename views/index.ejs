@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding declaration -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Search</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>User Search</h1>
+    <form action="/search" method="POST">
+        <label for="username">Enter Username:</label>
+        <!-- Input field for username with pattern restriction and required attribute -->
+        <input type="text" id="username" name="username" pattern="[A-Za-z]+" title="Please enter alphabets only" required>
+        <!-- Button to submit the form -->
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
